@@ -2,9 +2,10 @@
 #################################################################################################
 # Name: Nessus 6 Report Downloader
 # Author: Travis Lee
+# Update from: Prajwal Panchmahalkar
 #
 # Version: 1.0
-# Last Updated: 2/28/2016
+# Last Updated: 07/05/2016
 #
 # Description:  Interactive script that connects to a specified Nessus 6 server using the
 #		Nessus REST API to automate mass report downloads. It has the ability to download
@@ -29,6 +30,7 @@ require 'fileutils'
 require 'io/console'
 require 'date'
 require 'json'
+require 'openssl'
 
 # This method will download the specified file type from specified reports
 def report_download(http, headers, reports, reports_to_dl, filetypes_to_dl, chapters_to_dl, rpath, db_export_pw)
